@@ -1,0 +1,130 @@
+/* ## Featured Post
+--------------------------------------------- */
+
+.widget.featured-content {
+	
+	.entry-image {}
+	
+	.entry-title {
+		// font-size: ;
+	}
+	
+	.entry {
+		margin-bottom: 30px;
+	}
+	
+	.entry:last-of-type {
+		margin-bottom: 0;
+	}
+	
+}
+
+// when within the main content area
+.content .widget.featured-content {
+	
+}
+
+
+/* ## Genesis eNews
+--------------------------------------------- */
+
+.widget.enews-widget {
+	
+	.widgettitle {
+	}
+	
+	.enews {
+				
+		form {
+		}
+		
+		input[type="text"],
+		input[type="email"] {
+		}
+		
+		input#subbutton {
+		}
+		
+		// text before and after
+		p {
+			margin: 10px 0;
+		}
+		
+		// text after
+		form + p {
+			
+		}
+		
+	}
+	
+	// when within the main content area 
+	.content & {
+		
+		.enews {
+			@include clearfix;
+			
+			p {
+			}
+			
+			form {
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				font-size: 20px;
+				flex-flow: row wrap;
+				
+				input[type="text"],
+				input[type="email"] {
+					flex: 1;
+				}
+				
+				input[type="submit"] {
+					flex: 1 100%;
+				}
+				
+				input[type="text"],
+				input[type="email"] {
+					border: 0;
+					margin: 10px;
+					padding: 7px;
+				}
+			}
+			
+			input[type="text"],
+			input[type="email"] {
+				padding: 13px 10px;
+			}
+			
+		}
+		
+	}
+	
+	// within main content area and large screens
+	@include media('>=large') {
+		.content & {
+			.enews p {
+			}
+			form {
+			}
+		}
+	}
+	
+}
+
+
+/* ## Genesis Simple Share
+--------------------------------------------- */
+
+// Horizontally justify share buttons
+.share-after,
+.share-before {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+

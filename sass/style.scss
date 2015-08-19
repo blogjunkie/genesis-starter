@@ -1,0 +1,101 @@
+/*!
+Theme Name: Genesis Starter child theme
+Theme URI: http://github.com/blogjukie/genesis-starter/
+Description: A starter child theme for Genesis, optionally with Sass
+Author: David Wang
+Author URI: http://blogjunkie.net
+
+Tags: left-sidebar, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments
+
+Template: genesis
+Template Version: 2.1.3
+
+License: WTFPL
+License URI: http://www.wtfpl.net/txt/copying/
+*/
+
+/* # Table of Contents
+To be determined...
+*/
+
+@import 'bourbon';
+@import 'toolkit/include-media';
+@import 'toolkit/mixins';
+@import 'variables';
+
+
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+
+// Normalize
+@import 'toolkit/normalize';
+
+// Universal Box-Sizing (http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+/* # Global
+---------------------------------------------------------------------------------------------------- */
+
+// @import 'global/type';
+// @import 'global/base';
+// @import 'global/headings';
+// @import 'global/buttons-ctas';
+// @import 'global/forms';
+// @import 'global/animations';
+
+// Adapted from from Bourbon Neat
+@import 'base/typography';
+@import 'base/lists';
+@import 'base/tables';
+@import 'base/forms';
+@import 'base/buttons';
+
+
+/* # WordPress
+---------------------------------------------------------------------------------------------------- */
+
+//@import 'wordpress/images-galleries';
+//@import 'wordpress/other';
+
+
+/* # Theme Modules
+---------------------------------------------------------------------------------------------------- */
+
+//@import 'theme/header';
+//@import 'theme/menus';
+//@import 'theme/content';
+//@import 'theme/comments';
+//@import 'theme/widget-areas';
+//@import 'theme/footer';
+//@import 'theme/templates';
+
+
+/* # Plugins
+---------------------------------------------------------------------------------------------------- */
+
+@import 'plugins/plugins';
+@import 'plugins/genesis';
+// @import 'plugins/woocommerce';
+
+
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+@import 'structure-layout/clearfix';
+@import 'structure-layout/grid';
+@import 'structure-layout/layout';
+
+
+/* # Shame
+---------------------------------------------------------------------------------------------------- */
+// Shame - For new style snippets that haven't been sorted and commented yet
+@import 'shame';

@@ -1,0 +1,65 @@
+// Typography
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$base-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// $base-font-size: 1em; 	// 16px (original value)
+$base-font-size: 18px;		// optimized for Golden Ratio
+
+// Line height
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$base-line-height: 28px;	// optimized for Golden Ratio
+$heading-line-height: 1.2;
+
+// Other Sizes
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$base-border-radius: 3px;
+$base-spacing: 		$base-line-height;	// 28px
+$large-spacing: 	$base-spacing * 3;	// 54px
+$small-spacing: 	$base-spacing / 2;	// 9px;
+$base-z-index: 0;
+
+// Colors
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$blue: #477dca;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// Font Colors
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$base-background-color: #fff;
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+
+// Layout
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$site-max-width: 1200px;
+$content-max-width: 800px;
+
+// Breakpoints - http://include-media.com
+// Usage: 
+// @include media('>=medium') {} compiles to min-width:600px
+// @include media('>medium') {} compiles to min-width: 601px
+// @include media('<medium') {} compiles to max-width: 599px
+
+$breakpoints: (
+	'small'	: 360px,
+	'medium': 600px,
+	'large'	: 960px,
+	'xlarge': 1200px
+);

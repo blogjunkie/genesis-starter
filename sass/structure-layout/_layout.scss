@@ -1,0 +1,160 @@
+// Genesis layout <body> classes:
+// .content-sidebar-sidebar
+// .sidebar-content-sidebar
+// .sidebar-sidebar-content
+// .content-sidebar
+// .sidebar-content
+// .full-width-content
+
+/* ## Site Containers
+--------------------------------------------- */
+
+.site-container {
+	margin: 0 auto;	
+	padding: 0 $small-spacing;
+}
+
+.wrap {
+	margin: 0 auto;
+}
+
+.site-inner {
+	clear: both;
+	margin: 0 auto;
+	max-width: $site-max-width;
+}
+
+.wrap {
+	max-width: $site-max-width;
+}
+
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+
+/* ### Wrapping div for .content and .sidebar-primary */
+
+.content-sidebar-wrap {
+	@extend .cf;
+}
+
+@include media('>=large') {
+
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		width: 81.66667%; /* Approximately 980px in 3-col layouts */
+	}
+	
+	.content-sidebar-sidebar .content-sidebar-wrap {
+		float: left;
+	}
+	
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		float: right;
+	}
+
+}
+
+/* ### Content */
+
+.content {
+	margin-bottom: $large-spacing;
+	@extend .cf;
+	
+	.full-width-content & {
+		float: none;
+		max-width: $content-max-width;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+}
+
+@include media('>=large') {
+
+	.content {
+		width: 65%;
+		
+		.content-sidebar &,
+		.content-sidebar-sidebar &,
+		.sidebar-content-sidebar & {
+			float: left;
+		}
+		
+		.sidebar-content & {
+			float: right;
+		}
+		
+		.content-sidebar-sidebar &,
+		.sidebar-content-sidebar &,
+		.sidebar-sidebar-content & {
+			width: 59.1837%;
+		}		
+		
+		.full-width-content & {
+			width: 100%;
+		}
+		
+	}
+
+}
+
+
+/* ### Primary Sidebar */
+
+@include media('>=large') {
+	
+	.sidebar-primary {
+		float: right;
+		width: 30%;		/* 360px */
+		
+		.sidebar-content & {
+			float: left;
+		}
+		
+		/* The following rules are unnecessary if you use px based layouts */
+		.content-sidebar-sidebar &,
+		.sidebar-content-sidebar &, 
+		.sidebar-sidebar-content & {
+			width: 36.7347%;
+		}
+		
+	}
+
+}
+
+
+/* ### Secondary Sidebar */
+
+@include media('>=large') {
+
+	.sidebar-secondary {
+		float: left;
+		width: 15%;
+
+		.content-sidebar-sidebar & {
+			float: right;
+		}
+
+	}
+
+}
+
+
+/* ## Margins
+--------------------------------------------- */
+
+.content,
+.sidebar,
+.widget-area {
+
+	& > article:last-child,
+	& > section:last-child,
+	& > div:last-child {
+		margin-bottom: 0;
+	}
+
+}
+

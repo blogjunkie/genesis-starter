@@ -1,0 +1,22 @@
+// Float Clearing - from Genesis 2.1's style.css
+
+.cf {
+	@include clearfix;
+}
+
+.author-box,
+.clear,
+.clearfix,
+.entry,
+.entry-content,
+.footer-widgets,
+.nav-primary,
+.nav-secondary,
+.pagination,
+.site-container,
+.site-footer,
+.site-header,
+.site-inner,
+.wrap {
+	@extend .cf;
+}
