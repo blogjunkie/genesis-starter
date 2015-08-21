@@ -39,18 +39,32 @@ add_theme_support( 'genesis-responsive-viewport' );
  *
  * @since 1.0
  */
-add_theme_support( 'post-formats', array(
-	'aside',
-	'chat',
-	'gallery',
-	'image',
-	'link',
-	'quote',
-	'status',
-	'video',
-	'audio'
-));
-// add_theme_support( 'genesis-post-format-images' );
+// add_theme_support( 'post-formats', array(
+// 	'aside',
+// 	'chat',
+// 	'gallery',
+// 	'image',
+// 	'link',
+// 	'quote',
+// 	'status',
+// 	'video',
+// 	'audio'
+// ));
+
+/**
+ * Add post format images. This code will look for
+ * images located in the images/post-formats/ directory 
+ *
+ * @since 1.0
+ */
+//add_theme_support( 'genesis-post-format-images' );
+
+/**
+ * Add Genesis accessiblity support.
+ *
+ * @since 1.0
+ */
+add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu', 'search-form', 'skip-links', 'rems' ) );
 
 /**
  * Add Genesis footer widget areas.

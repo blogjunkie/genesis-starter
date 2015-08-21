@@ -1,0 +1,436 @@
+/* ## Home page
+--------------------------------------------- */
+
+@include min-width(medium) {
+
+.home {
+	
+	.content .widget.fromtheblog {
+		
+		.entry:first-of-type {
+			background-image: url('images/blog.png');
+			background-repeat: no-repeat;
+			background-position: 94% 30px;
+			background-size: 100px 71px;
+		}
+		
+		.entry:last-of-type {
+			margin-bottom: 38px;
+		}
+		
+		.entry-header {
+			margin-top: 80px;
+		}
+		
+		.entry-content {
+			clear: none;
+		}
+		
+	}
+	
+}
+
+}
+
+
+/* ## Portfolio & Press
+--------------------------------------------- */
+
+.post-type-archive-portfolio,
+.post-type-archive-press {
+	
+	.entry {
+		text-align: center;
+	}
+	
+	.entry-header {
+		float: none;
+		padding-left: 0;
+		
+		a { color: $body-font-color; }
+		a:hover { color: $primary-color; }
+	}
+	
+	.entry-title {
+		font-size: $font-size-h3;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+	}
+	
+	.entry-thumbnail {
+		float: none;
+		margin-bottom: $base-spacing;
+			
+		img {
+			@include border-shadow;
+		}
+	}
+}
+
+
+/* ## Cards
+--------------------------------------------- */
+
+.card-title {
+	display: block !important;
+	margin: 0;
+	line-height: 1;
+	text-transform: uppercase;
+	overflow: hidden;
+	
+	@include min-width(small) {
+		width: 100% !important;
+	}
+}
+
+.card-wrap {
+	background: $secondary-color;
+	box-sizing: content-box;
+	@include border-shadow;
+}
+	
+.card-content {
+	padding: 12px;
+}
+
+$brand-palette: (
+  'brand-palette-1' : $brand-palette-1,
+  'brand-palette-2' : $brand-palette-2,
+  'brand-palette-3' : $brand-palette-3,
+  'brand-palette-4' : $brand-palette-4,
+  'brand-palette-5' : $brand-palette-5,
+  'brand-palette-6' : $brand-palette-6
+);
+
+@each $cardstyle, $color in $brand-palette {
+    .#{$cardstyle} {
+	    .card-title,
+	    a.button {
+	        background-color: $color;
+	    }
+	    a.button:hover {
+		    background-color: darken( $color, 20% );
+	    }
+    }
+}
+
+
+/* ## Callout
+--------------------------------------------- */
+
+.template-callout {
+	
+	.content {
+		
+		.entry {
+			background: $secondary-color;
+			@include border-shadow;
+			position: relative;
+			z-index: 10;
+		}
+		
+		.entry-title {			
+			background: $primary-color;
+			color: $white;
+			padding: 10px 30px 10px 10px;
+			position: relative;
+			z-index: 1;
+			@include angle-right;
+			
+			@include min-width(medium) {
+				max-width: 35%;
+			}
+		}
+		
+		.entry-thumbnail {
+			text-align: center;
+		}
+		
+		.entry-content {
+			padding: 30px;
+							
+			.entry-content-inner {
+				border-bottom: 1px solid $steel;
+				padding-bottom: 20px;
+			}
+			
+			h1, h2, h3 {
+				border-bottom: 1px solid $steel;
+				padding-bottom: 10px;
+				margin-bottom: 18px;
+				
+				
+				&:first-of-type {
+					margin-top: 0;
+				}
+				
+			}
+			
+			#logo {
+				display: block;
+				margin: 40px auto;
+			}
+			
+			.contact-details {
+				border-top: 1px solid $iron;
+				max-width: 360px;
+				min-width: 340px;
+				margin: 40px auto 0;
+				
+				h4 {
+					letter-spacing: 1px;
+					text-align: center;
+				}
+				
+				.row {
+					border-bottom: 1px solid $iron;
+					margin: 0;
+					padding: 8px 12px;
+				}
+				
+				dl {
+					text-align: center;
+					@include clearfix;
+				}
+				
+				dt {
+					color: $primary-color;
+					text-transform: uppercase;
+				}
+				
+				dd {
+					margin-left: 0;
+				}
+				
+				.icon { display: none; }
+				
+			}
+			
+		}
+		
+		.subscribe-form {
+			background: $primary-color;
+			color: $white;
+			padding: 30px;
+			
+			h2, p {
+				color: inherit;
+				text-align: center;
+			}
+			
+			h2 {
+				border-bottom: 1px solid $white;
+				font-size: $font-size-h3;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+			}
+			
+			.mc4wp-form {
+				margin-top: 20px;
+			}
+			
+			.form-row {
+				margin-bottom: $small-spacing;
+			}
+			
+			label {
+				font-weight: normal;
+			}
+			
+			input {
+				color: $steel;
+			}
+			
+			input[type="submit"] {
+				background: $brand-palette-5;
+				color: $white;
+			}
+			
+			button[type="submit"] {
+				color: $white;
+				border-top: 36px solid $brand-palette-5;
+				border-left: 23px solid transparent;
+				padding: 0 16px;
+				height: 0;
+				position: relative;
+				
+				span {
+					position: relative;
+					top: -26px;
+				}
+			}
+			
+			button[type="submit"]:hover {
+				background: transparent;
+				border-top: 36px solid darken($brand-palette-5, 10%);
+			}
+		}
+		
+		.callout-cta {
+			line-height: 36px;
+			max-width: 360px;
+			margin: 0 auto;
+			text-align: center;
+			
+			.cta-button {
+				border-top: 36px solid $primary-color;
+				border-left: 23px solid transparent;
+				height: 0;
+				padding: 0 16px 0 20px;
+			//	background: $primary-color;
+				color: $white;
+				display: block;
+				line-height: 20px;
+				margin-top: 10px;
+			//	padding: 8px 16px;
+				
+				span {
+					position: relative;
+					top: -28px;
+				}
+				
+			}
+			
+			.cta-button:hover {
+				border-top: 36px solid darken( $primary-color, 15% );
+			}			
+			
+		}
+		
+	}
+	
+}
+
+
+@include min-width(medium) {
+
+	.template-callout .content {
+		
+		.callout-cta {
+			max-width: 100%;
+			margin: 0;
+			text-align: left;
+			
+			.callout-cta-text {
+				float: left;
+			}
+			
+			.cta-button {
+				float: right;
+				margin-top: 0;
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+
+@include min-width(large) {
+
+	.template-callout {
+		
+		.content {
+			
+			.entry {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+			}
+			
+			.entry-thumbnail {
+				background: $white;
+				padding-left: 8px;
+				-ms-flex-order: 2; 
+				-webkit-order: 2;
+				order: 2;
+				-ms-flex: 3.5;
+				-webkit-flex: 3.5;
+				flex: 3.5;
+			}
+			
+			.entry-content {
+				padding: 30px 50px 50px;
+				-ms-flex: 6;
+				-webkit-flex: 6;
+				flex: 6;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				
+				#logo {
+					max-width: 320px;
+				}
+				
+				.contact-details {
+					font-size: 18px;
+					
+					.icon {
+						display: block;
+						background: $primary-color;
+						border-radius: 1000px;
+						color: $white;
+						display: inline-block;
+						font-size: $font-size-smaller;
+						line-height: 29px;
+						text-align: center;
+						height: 30px;
+						width: 30px;
+					}
+				
+					dt {
+						float: left;
+						text-align: left;
+					}
+					
+					dd {
+						width: 64%;
+						float: right;
+						text-align: left;
+					}
+
+				}
+				
+			}
+			
+			.subscribe-form {
+				padding: 30px 40px;
+				-ms-flex: 4.5;
+				-webkit-flex: 4.5;
+				flex: 4.5;
+			}
+			
+			.form-row-submit {
+				border-top: 1px solid $white;
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				
+				label {
+					line-height: 38px;
+					-ms-flex: 1.4;
+					-webkit-flex: 1.4;
+					flex: 1.4;
+				}
+				
+				input[type="submit"] {
+					-ms-flex: 1;
+					-webkit-flex: 1;
+					flex: 1;
+					width: 150px;
+				}
+
+			}			
+		
+		}
+	
+	}
+
+}

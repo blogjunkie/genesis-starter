@@ -1,0 +1,148 @@
+/* ## Images
+--------------------------------------------- */
+
+img,
+picture {
+	margin: 0;
+	max-width: 100%;
+	height: auto; // IE8 image height correct, so that img max-width: 100% doesn't produce disproportionate images
+}
+
+
+img {
+	
+	.gallery & {
+		width: auto;
+	}
+	
+	a.aligncenter & {
+		display: block;
+		margin: 0 auto;
+	}
+	
+	a.alignnone & {
+		display: inline-block;
+	}
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+	max-width: 100%;
+}
+
+.alignleft {
+	float: left;
+	text-align: left;
+}
+
+	a.alignleft,
+	img.alignleft,
+	.wp-caption.alignleft {
+		margin: 0 $base-spacing $base-spacing 0;
+	}
+
+.alignright {
+	float: right;
+	text-align: right;
+}
+
+	a.alignright,
+	img.alignright,
+	.wp-caption.alignright {
+		margin: 0 0 $base-spacing $base-spacing;
+	}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto $base-spacing;
+}
+
+img.alignnone,
+.alignnone {
+	margin-bottom: $small-spacing;
+}
+
+.wp-caption {
+	margin-left: 0;
+	margin-right: 0;
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	border-bottom: $base-border;
+	font-size: 13px;
+	padding: 8px 0;
+
+	.entry-content & {
+		margin-bottom: 0;
+	}
+}
+
+
+/* ## Galleries
+--------------------------------------------- */
+
+.gallery {
+	overflow: hidden;
+	
+	img {
+	//	border: 1px solid $secondary-color;
+	//	height: auto;
+	//	padding: 4px;
+	}
+	
+	img:hover {
+		border-color: darken( $secondary-color, 20% );
+	}
+}
+
+.gallery-item {
+	float: left;
+	margin: 0 0 $small-spacing;
+	text-align: center;
+	padding: $small-spacing/2;
+}
+
+
+@include media('>=large') {
+	
+	.gallery-item {
+		// margin: 0 0 $small-spacing;
+	
+		.gallery-columns-2 & {
+			width: 50%;
+		}
+		
+		.gallery-columns-3 & {
+			width: 33%;
+		}
+		
+		.gallery-columns-4 & {
+			width: 25%;
+		}
+		
+		.gallery-columns-5 & {
+			width: 20%;
+		}
+		
+		.gallery-columns-6 & {
+			width: 16.6666%;
+		}
+		
+		.gallery-columns-7 & {
+			width: 14.2857%;
+		}
+		
+		.gallery-columns-8 & {
+			width: 12.5%;
+		}
+		
+		.gallery-columns-9 & {
+			width: 11.1111%;
+		}	
+		
+	}
+	
+}

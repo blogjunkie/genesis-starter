@@ -2,54 +2,106 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 $base-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $heading-font-family: $base-font-family;
+$alt-font-family: $helvetica;
+
+// $modular-scale-ratio: $golden; 	// options: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss
+$modular-scale-base: 1em;	
+
 
 // Font Sizes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+$em-base: 			18px;	// for the px-to-em and px-to-rem functions
 // $base-font-size: 1em; 	// 16px (original value)
-$base-font-size: 18px;		// optimized for Golden Ratio
+$base-font-size: 	18px;	// optimized for Golden Ratio
+$font-size-smaller:	16px;	// ideally this should be 14px (18 * 0.75) but that's a tad too small
+
 
 // Line height
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$base-line-height: 28px;	// optimized for Golden Ratio
-$heading-line-height: 1.2;
+$base-line-height: 		28px;	// optimized for Golden Ratio
+$heading-line-height: 	1.25;
+
 
 // Other Sizes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 $base-border-radius: 3px;
 $base-spacing: 		$base-line-height;	// 28px
-$large-spacing: 	$base-spacing * 3;	// 54px
-$small-spacing: 	$base-spacing / 2;	// 9px;
-$base-z-index: 0;
+$large-spacing: 	$base-spacing * 2;	// 56px
+$small-spacing: 	$base-spacing / 2;	// 14px;
+$base-z-index: 		0;
+
 
 // Colors
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+
+// Default
+$primary-color: 	#d54e21;	// WP orange
+$secondary-color: 	#21759b;	// WP blue
+$alert-color: 		#f04124;
+$success-color: 	#43ac6a;
+$warning-color: 	#f08a24;
+$info-color: 		#a0d3e8;
+
+// Social Colors - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$twitter: 			#00aced;
+$facebook: 			#3b5998;
+$linkedin: 			#007bb6;
+$google: 			#dd4b39;
+$youtube: 			#b00;
+$pinterest: 		#cb2027;
+$tumblr: 			#32506d;
+$flickr: 			#ff0084;
+$instagram: 		#517fa4;
+$vimeo: 			#aad450;
+$foursquare: 		#0072b1;
+$rss: 				#f60;
+
+// Monochrome palette borrowed from Zurb Foundation
+$white       : 		#FFFFFF;
+$ghost       : 		#FAFAFA;
+$snow        : 		#F9F9F9;
+$vapor       : 		#F6F6F6;
+$white-smoke : 		#F5F5F5;
+$silver      : 		#EFEFEF;
+$smoke       :		#EEEEEE;
+$gainsboro   :		#DDDDDD;
+$iron        : 		#CCCCCC;
+$base        : 		#AAAAAA;
+$aluminum    : 		#999999;
+$jumbo       : 		#888888;
+$monsoon     : 		#777777;
+$steel       : 		#666666;
+$charcoal    : 		#555555;
+$tuatara     : 		#444444;
+$oil         : 		#333333;
+$jet         : 		#222222;
+$black       : 		#000000;
+
 
 // Font Colors
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-background-color: $snow;
+$base-font-color: 		$oil;
+$action-color: 			$primary-color;
+
 
 // Border
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
+$base-border-color: 	$base;
+$base-border: 			1px solid $base-border-color;
+
 
 // Forms
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+$form-box-shadow: 		inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($primary-color, $lightness: -5%, $alpha: -0.3);
 
 
 // Layout
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$site-max-width: 1200px;
-$content-max-width: 800px;
+$site-max-width: 		1200px;
+$content-max-width: 	800px;
 
 // Breakpoints - http://include-media.com
 // Usage: 

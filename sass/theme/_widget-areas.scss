@@ -1,0 +1,107 @@
+/* ## Widgets
+--------------------------------------------- */
+
+.widget {
+	margin-bottom: $large-spacing;
+	word-wrap: break-word;
+	@extend .cf;
+	
+	&:last-of-type,
+	p:last-child {
+		margin-bottom: 0;
+	}
+	
+	.widget-wrap {
+		@extend .cf;
+	}
+	
+}
+
+.widgettitle {
+	/* Placeholder */
+}
+
+.widget_calendar {
+	/* Placeholder */
+}
+
+.widget_categories {
+	/* Placeholder */
+}
+
+
+/* ### Featured Post */
+
+.widget.featured-content {
+	
+	.entry-image {}
+	
+	.entry-title {
+		font-size: inherit;
+	}
+	
+	.entry {
+		margin-bottom: 30px;
+	}
+	
+	.entry:last-of-type {
+		margin-bottom: 0;
+	}
+	
+}
+
+.content .widget.featured-content {
+	/* when within the main content area */
+}
+
+
+/* ## After Post Widgets
+--------------------------------------------- */
+
+.after-entry {
+	margin-bottom: $large-spacing;
+}
+
+
+
+/* ## Sidebar Widgets
+--------------------------------------------- */
+
+.sidebar {
+	
+	p {
+		
+	}
+	
+	p:last-child,
+	ul > li:last-child {
+		margin-bottom: 0;
+	}	
+	
+}
+
+
+
+/* ## Footer Widgets
+--------------------------------------------- */
+
+.footer-widgets {
+	background-color: $silver;
+	clear: both;
+	padding: $large-spacing 0;
+}
+
+@include media( '>=large' ) {
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		float: left;
+		margin-right: 5%;
+		width: 30%;
+	}
+	
+	.footer-widgets-3 {
+		float: right;
+		margin-right: 0;
+	}
+}

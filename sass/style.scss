@@ -1,7 +1,7 @@
 /*!
 Theme Name: Genesis Starter child theme
 Theme URI: http://github.com/blogjukie/genesis-starter/
-Description: A starter child theme for Genesis, optionally with Sass
+Description: A starter child theme for Genesis that's easy to start using, with Sass and Bourbon (optional)
 Author: David Wang
 Author URI: http://blogjunkie.net
 
@@ -15,7 +15,33 @@ License URI: http://www.wtfpl.net/txt/copying/
 */
 
 /* # Table of Contents
-To be determined...
+- HTML5 Reset
+- Global
+- WordPress
+	- Images
+	- Galleries
+	- Other
+- Theme Modules
+	- Header
+	- Navigation Menus
+	- Content
+	- Comments
+	- Widgets
+	- After Post Widgets
+	- Sidebar Widgets
+	- Footer Widgets
+	- Site Footer
+- Plugins
+	- Jetpack
+	- eNews Extended
+	- Genesis Simple Share
+- Structure and Layout
+	- Column Classes
+	- Block Grid
+	- Site Containers
+	- Column Widths and Positions
+	- Margins
+- Shame
 */
 
 @import 'bourbon';
@@ -45,13 +71,6 @@ html {
 /* # Global
 ---------------------------------------------------------------------------------------------------- */
 
-// @import 'global/type';
-// @import 'global/base';
-// @import 'global/headings';
-// @import 'global/buttons-ctas';
-// @import 'global/forms';
-// @import 'global/animations';
-
 // Adapted from from Bourbon Neat
 @import 'base/typography';
 @import 'base/lists';
@@ -63,19 +82,20 @@ html {
 /* # WordPress
 ---------------------------------------------------------------------------------------------------- */
 
-//@import 'wordpress/images-galleries';
-//@import 'wordpress/other';
+@import 'wordpress/images-galleries';
+@import 'wordpress/other';
 
 
 /* # Theme Modules
 ---------------------------------------------------------------------------------------------------- */
 
-//@import 'theme/header';
-//@import 'theme/menus';
-//@import 'theme/content';
-//@import 'theme/comments';
-//@import 'theme/widget-areas';
-//@import 'theme/footer';
+@import 'theme/header';
+@import 'theme/menus';
+@import 'theme/content';
+@import 'theme/comments';
+@import 'theme/widget-areas';
+@import 'theme/footer';
+@import 'theme/accessibility';
 //@import 'theme/templates';
 
 

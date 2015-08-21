@@ -1,0 +1,65 @@
+/* ## Header
+--------------------------------------------- */
+
+.site-header {
+
+	.wrap {
+		padding: $large-spacing 0;
+	}
+	
+}
+
+
+/* ### Title Area */
+
+.title-area {}
+
+.site-title {}
+
+.site-description {}
+
+.header-image {
+	
+	.site-title > a {
+		/*
+		background: url(images/logo.png) no-repeat left;
+		float: left;
+		min-height: 60px;
+		width: 100%;	
+		*/
+	}
+
+	.site-title,
+	.site-description {
+		/* @include hide-text; */
+	}
+
+}
+
+@include media('>=large') {
+
+	.title-area {
+		float: left;
+		width: 49%;
+		
+		.header-full-width & {
+			float: none;
+			width: 100%;
+		}
+		
+	}	
+	
+}
+
+
+// /* ## Header Right widget
+// --------------------------------------------- */
+
+@include media('>=large') {
+	
+	.header-widget-area {
+		float: right;
+		max-width: 49%;
+	}
+	
+}

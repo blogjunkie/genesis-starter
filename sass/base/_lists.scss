@@ -1,7 +1,7 @@
 ul,
 ol {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 $base-spacing;
   padding: 0;
 
   &%default-ul {
@@ -18,7 +18,7 @@ ol {
 }
 
 dl {
-  margin-bottom: $small-spacing;
+  margin-bottom: $base-spacing;
 
   dt {
     font-weight: bold;

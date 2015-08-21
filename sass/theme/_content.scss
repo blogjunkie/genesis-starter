@@ -1,0 +1,64 @@
+/* ## Content
+--------------------------------------------- */
+
+/* ### Entries */
+
+.entry {
+	margin-bottom: $large-spacing;
+	word-wrap: break-word;
+	
+}
+
+.entry-content {
+
+	ol {
+		@extend %default-ol;
+	}
+	
+	ul {
+		@extend %default-ul;
+	}
+
+}
+
+
+/* ### Entry Meta */
+
+.entry-meta {
+	font-family: $alt-font-family;
+	font-size: $font-size-smaller;
+}
+
+
+/* ### Pagination */
+
+.pagination {
+	clear: both;
+	margin: $large-spacing 0;
+}
+
+.adjacent-entry-pagination {
+	margin-bottom: 0;
+}
+
+.archive-pagination {
+
+	li {
+		display: inline;
+	}
+	
+	li a {
+		background-color: $base;
+		color: $white;
+		cursor: pointer;
+		display: inline-block;
+		font-size: $font-size-smaller;
+		padding: 8px 12px;
+	}
+	
+	li a:hover,
+	.active a {
+		background-color: $primary-color;
+	}
+
+}

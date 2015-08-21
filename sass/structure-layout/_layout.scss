@@ -11,7 +11,7 @@
 
 .site-container {
 	margin: 0 auto;	
-	padding: 0 $small-spacing;
+	// padding: 0 $small-spacing;
 }
 
 .wrap {
@@ -20,7 +20,7 @@
 
 .site-inner {
 	clear: both;
-	margin: 0 auto;
+	margin: $large-spacing auto;
 	max-width: $site-max-width;
 }
 
