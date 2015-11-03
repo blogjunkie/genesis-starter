@@ -1,3 +1,7 @@
+# Avoid committing to public repo
+init.min.js
+
+
 # Project build files
 .sass-cache
 node_modules

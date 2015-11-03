@@ -44,30 +44,52 @@ function child_do_doctype() {
 
 }
 
-// add_action( 'wp_enqueue_scripts', 'child_load_styles' );
+add_action( 'wp_enqueue_scripts', 'child_load_styles' );
 /**
  * Enqueue webfonts or additional stylesheets
  * 
- * @since 1.0googleapis.com/css?family=Lato:300,400,700',		// Lato (light, normal, and bold), for example
+ * @since 1.0
+ */
+function child_load_styles() {
+
+	// Google Fonts
+	wp_enqueue_style(
+		'google-fonts',
+		'//fonts.googleapis.com/css?family=Open+Sans:700,700italic,400,400italic|Roboto+Slab:400,300',	
 		array(),
 		null
- 	);
+	);
 	
+	// Fontawesome
+	wp_enqueue_style('fontawesome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css','','4.3.0','all');
+
 }
 
 add_action( 'wp_enqueue_scripts', 'child_load_scripts' );
 /**
  * Enqueue scripts in the footer
  *
- * @since 1.0 '/lib/js/scripts.js', array('jquery'), null, true );
-	
-	// Only load comment-reply.js when necessary
-	if( ( is_single() || is_page() || is_attachment() ) && comments_open() & (int) get_option( 'thread_comments' ) === 1 && !is_front_page() ) {
+ * @since 1.0 
+ */
+function child_load_scripts() {
+
+	if( ( is_single() || is_page() || is_attachment() ) && comments_open() & get_option( 'thread_comments' ) == 1 && !is_front_page() ) {
 		wp_enqueue_script( 'comment-reply' );
 	} else {
 		wp_dequeue_script( 'comment-reply' );
 	}
 
+	// Override WP default self-hosted jQuery with version from Google's CDN
+	// wp_deregister_script( 'jquery' );
+	// wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array(), null, true );
+	// add_filter( 'script_loader_src', 'gpg_jquery_local_fallback', 10, 2 );
+	
+	// register other scripts
+	wp_register_script('backstretch', '//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js', array('jquery'), '2.0.4' );
+
+	// Main script file (in footer)
+	wp_enqueue_script( 'gpg', get_stylesheet_directory_uri() . '/lib/js/init.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+		
 }
 
 // add_filter( 'genesis_pre_load_favicon', 'child_pre_load_favicon' );

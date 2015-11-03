@@ -1,0 +1,13 @@
+.fluid-width-video-wrapper {
+	margin-bottom: $paragraph-margin-bottom;
+	max-width: 100%;
+}
+
+embed,
+iframe,
+object,
+video {
+	@extend .fluid-width-video-wrapper;
+	margin-left: auto;
+	margin-right: auto;
+}

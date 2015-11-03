@@ -8,6 +8,7 @@ require_once get_template_directory() . '/lib/init.php';
 // Child theme definitions
 define( 'CHILD_THEME_NAME', 'Genesis Starter' );
 define( 'CHILD_THEME_URL', 'http://github.com/blogjunkie/genesis-starter' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 // Genesis
 require_once CHILD_DIR . '/includes/genesis.php';				// Customizations to Genesis-specific functions
