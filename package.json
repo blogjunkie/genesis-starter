@@ -1,0 +1,20 @@
+{
+  "name": "genesis-starter",
+  "version": "1.0.0",
+  "author": "David Wang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blogjunkie/genesis-starter.git"
+  },
+  "license": "WTFPL",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-sass": "*"
+  },
+  "devDependencies": {
+    "node-bourbon": "*"
+  }
+}

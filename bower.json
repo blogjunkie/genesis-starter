@@ -1,0 +1,29 @@
+{
+  "name": "genesis-starter",
+  "homepage": "https://github.com/blogjunkie/genesis-starter",
+  "authors": [
+    "David Wang <david@dw.my>"
+  ],
+  "description": "Front-end packages used in the Genesis Starter theme",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "genesiswp",
+    "wordpress"
+  ],
+  "license": "WTFPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "include-media": "~1.4.1",
+    "normalize-scss": "~3.0.3",
+    "jquery.fitvids": "FitVids#~1.1.0"
+  }
+}
