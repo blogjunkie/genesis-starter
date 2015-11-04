@@ -1,5 +1,6 @@
 # Avoid committing to public repo
 init.min.js
+style.css.map
 
 
 # Project build files

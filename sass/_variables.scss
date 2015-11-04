@@ -1,25 +1,31 @@
 // Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$base-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$heading-font-family: $base-font-family;
-$alt-font-family: $helvetica;
+// See: http://bourbon.io/docs/#font-stacks
+$base-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+$alt-font-family: 'Roboto Slab', 'Cambria', 'Georgia', serif;
+$heading-font-family: $alt-font-family;
 
-// $modular-scale-ratio: $golden; 	// options: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss
+// $modular-scale-ratio: $golden; 	// defaults & options: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss
 $modular-scale-base: 1em;	
 
 
 // Font Sizes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$em-base: 			18px;	// for the px-to-em and px-to-rem functions
+
+// Tuned for a content width of 640px -- Font Size: 16, Line Height: 26
+// See: http://www.pearsonified.com/typography/
+
+// $em-base: 		16px;	// for the px-to-em and px-to-rem functions, defaults to 16px
 // $base-font-size: 1em; 	// 16px (original value)
-$base-font-size: 	18px;	// optimized for Golden Ratio
-$font-size-smaller:	16px;	// ideally this should be 14px (18 * 0.75) but that's a tad too small
+$base-font-size: 	16px;	// for body and p
+$font-size-smaller:	14px;	// for secondary text
 
 
 // Line height
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$base-line-height: 		28px;	// optimized for Golden Ratio
+$base-line-height: 		26px;	// optimized for Golden Ratio
 $heading-line-height: 	1.25;
+$paragraph-margin-bottom: $base-line-height;
 
 
 // Other Sizes
@@ -101,7 +107,7 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($primary-color, $
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 $site-max-width: 		1200px;
-$content-max-width: 	800px;
+$content-max-width: 	900px;
 
 // Breakpoints - http://include-media.com
 // Usage: 

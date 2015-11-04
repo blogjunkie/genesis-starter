@@ -18,7 +18,16 @@ License URI: http://www.wtfpl.net/txt/copying/
 /*!
 # Table of Contents
 - HTML5 Reset
+	- Normalize
+	- Box Sizing
 - Global
+	- Typography
+	- Lists
+	- Tables
+	- Objects
+	- Forms
+	- Buttons
+	- Accessibility
 - WordPress
 	- Images
 	- Galleries
@@ -55,8 +64,19 @@ License URI: http://www.wtfpl.net/txt/copying/
 /* # HTML5 Reset
 ---------------------------------------------------------------------------------------------------- */
 
+/* ## Normalize
+--------------------------------------------- */
+
+/* 
+If you are not minifying this file, replace this section with the contents of this page:
+https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css
+*/
 // Normalize
 @import '../bower_components/normalize-scss/_normalize.scss';
+
+
+/* ## Box Sizing
+--------------------------------------------- */
 
 // Universal Box-Sizing (http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
 html {
@@ -77,8 +97,10 @@ html {
 @import 'base/typography';
 @import 'base/lists';
 @import 'base/tables';
+@import 'base/objects';
 @import 'base/forms';
 @import 'base/buttons';
+@import 'base/accessibility';
 
 
 /* # WordPress
@@ -97,7 +119,6 @@ html {
 @import 'theme/comments';
 @import 'theme/widget-areas';
 @import 'theme/footer';
-@import 'theme/accessibility';
 //@import 'theme/templates';
 
 

@@ -3,6 +3,10 @@
 
 /* ### Entries */
 
+.entry-title {
+	margin: 0 0 em(26, 48);
+}
+
 .entry {
 	margin-bottom: $large-spacing;
 	word-wrap: break-word;

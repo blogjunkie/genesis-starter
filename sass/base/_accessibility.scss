@@ -1,3 +1,5 @@
+/* ## Accessibility
+--------------------------------------------- */
 
 /* ### Skip links */
 
@@ -24,7 +26,12 @@
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
-	@extend %visuallyhidden;
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
 	color: #333;
 	background: #fff;
 	
