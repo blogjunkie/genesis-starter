@@ -12,7 +12,9 @@
 
 /* ### Title Area */
 
-.title-area {}
+.title-area {
+	text-align: center;
+}
 
 .site-title {
 	font-size: 3em;
@@ -25,24 +27,34 @@
 }
 
 .header-image {
-	
+
 	.site-title > a {
-		/*
 		background: url(images/logo.png) no-repeat left;
-		float: left;
-		min-height: 60px;
-		width: 100%;	
-		*/
+		background-size: contain;
+		display: block;
+		margin: 0 auto;
+		min-height: 100px; 	/* height of logo image */
+		width: 220px;		/* width of logo image */
+		@include media('retina2x') {
+			background-image: url(images/logo@2x.png);
+		}
 	}
 
-	.site-title,
+	.site-title {
+		@include hide-text;
+	}
+	
 	.site-description {
-		/* @include hide-text; */
+		@extend .visuallyhidden;
 	}
 
 }
 
 @include media('>=large') {
+	
+	.header-image .site-title > a {
+		margin: 0;
+	}
 
 	.title-area {
 		float: left;
@@ -53,7 +65,7 @@
 			width: 100%;
 		}
 		
-	}	
+	}
 	
 }
 

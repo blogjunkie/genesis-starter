@@ -23,15 +23,23 @@
 
 /* ### Screen reader text */
 
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.visuallyhidden {
+	position: absolute !important;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
+}
+
+
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
-	position: absolute !important;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	width: 1px;
-	border: 0;
-	overflow: hidden;
+	@extend .visuallyhidden;
 	color: #333;
 	background: #fff;
 	

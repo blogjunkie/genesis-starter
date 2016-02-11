@@ -1,6 +1,8 @@
 /* ## Navigation Menus
 --------------------------------------------- */
 
+/* ### All nav menus - mobile */
+
 .genesis-nav-menu {
 	clear: both;
 	font-size: $font-size-smaller;
@@ -10,7 +12,7 @@
 	
 	.menu-item {
 		display: inline-block;
-		text-align: left;
+		position: relative;
 	}
 	
 	a {
@@ -24,32 +26,27 @@
 			color: $primary-color;
 		}		
 	}
-	
+
 	.sub-menu {
 		left: -9999px;
 		opacity: 0;
 		position: absolute;
+		@include transition( opacity 0.4s ease-in-out );
 		width: 200px;
 		z-index: 99;
-		@include transition( opacity 0.4s ease-in-out );
 		
 		a {
-			background-color: $ghost;
+			background: $ghost;
 			border: $base-border;
-			border-top: none;
-			font-size: 14px;
+			border-top: 0;
+			font-size: $font-size-smaller;
 			padding: 20px;
 			position: relative;
 			width: 200px;
+			word-wrap: break-word;
 		}
-		
-		.sub-menu {
-			border-top: $base-border;
-			margin: -56px 0 0 199px;
-		}	
-
 	}
-			
+	
 	.menu-item:hover {
 		position: static;
 		
@@ -57,37 +54,80 @@
 			left: auto;
 			opacity: 1;
 		}
+	}
+	
+	.menu-item-has-children {
+		
+		& > a:after {
+			content: "\f078";
+			cursor: pointer;
+			float: right;
+			font: normal 12px/14px 'FontAwesome';
+			padding-left: 10px;
+			right: 0;
+			text-align: right;
+		}
+				
+	}
+		
+}
 
-	}
-	
-	& > .first > a {
-		padding-left: 0;
-	}
-	
-	& > .last > a {
-		padding-right: 0;
-	}
-	
-	& > .right {
-		color: #fff;
-		float: right;
-		list-style-type: none;
-		padding: 30px 0;
-	}
-	
-	& > .right > a {
-		display: inline;
-		padding: 0;
-	}
-	
-	& > .rss > a {
-		margin-left: 48px;
-	}
-	
-	& > .search {
-		padding: 10px 0 0;
-	}	
 
+/* ### All nav menus - desktop */
+	
+@include media('>=large') {
+	
+	.genesis-nav-menu {
+		display: block;
+		
+		.menu-item-has-children:before {
+			display: none;
+		}
+		
+		.menu-item {
+			display: inline-block;
+		}
+		
+		.sub-menu {
+			display: block !important;
+			
+			.sub-menu {
+				border-top: $base-border;
+				margin: -56px 0 0 199px;
+			}	
+	
+		}
+
+		& > .first > a {
+			padding-left: 0;
+		}
+		
+		& > .last > a {
+			padding-right: 0;
+		}
+		
+		& > .right {
+			color: #fff;
+			float: right;
+			list-style-type: none;
+			padding: 30px 0;
+		}
+		
+		& > .right > a {
+			display: inline;
+			padding: 0;
+		}
+		
+		& > .rss > a {
+			margin-left: 48px;
+		}
+		
+		& > .search {
+			padding: 10px 0 0;
+		}	
+		
+	}
+	
 }
 
 
@@ -103,23 +143,31 @@
 }
 
 
-/* ###Header Navigation */
+/* ### Header Navigation - mobile */
 
-.site-header {
+.site-header .nav-header {
 	
-	.sub-menu {
-		border-top: $base-border;
+	a {
+		// color: $white;
+		
+		&:hover {
+			color: $base-font-color;
+		}
 	}
 	
-	.sub-menu .sub-menu {
-		margin-top: -56px;
-	}
-	
-	.genesis-nav-menu li li {
-		margin-left: 0;
-	}
-
 }
+
+
+/* ### Header Navigation */
+
+@include media('>=large') {
+
+	.site-header .nav-header .sub-menu {
+		border-top: 1px solid $base;
+	}
+	
+}
+
 
 
 /* ### Primary Navigation */

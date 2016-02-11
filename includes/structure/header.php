@@ -61,7 +61,7 @@ function child_load_styles() {
 	);
 	
 	// Fontawesome
-	wp_enqueue_style('fontawesome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css','','4.3.0','all');
+	wp_enqueue_style('fontawesome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css','','4.5.0','all');
 
 }
 
@@ -82,7 +82,7 @@ function child_load_scripts() {
 	// Override WP default self-hosted jQuery with version from Google's CDN
 	// wp_deregister_script( 'jquery' );
 	// wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array(), null, true );
-	// add_filter( 'script_loader_src', 'gpg_jquery_local_fallback', 10, 2 );
+	// add_filter( 'script_loader_src', 'child_jquery_local_fallback', 10, 2 );
 	
 	// register other scripts
 	wp_register_script('backstretch', '//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js', array('jquery'), '2.0.4' );
